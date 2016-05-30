@@ -19,7 +19,7 @@ public class FileNIOAdapterTest {
 			Assert.assertEquals("This is a test file.", content);
 		}
 		catch (Exception e) {
-			Assert.assertTrue(false);
+			Assert.assertTrue(e.getMessage(), false);
 		}
 	}
 }

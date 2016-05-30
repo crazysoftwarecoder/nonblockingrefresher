@@ -27,8 +27,8 @@ public class FileNIOAdapter implements AutoCloseable {
 
 		ByteBuffer buf = ByteBuffer.allocate(48);
 
-		int bytesRead = this.channel.read(buf);
-		while (bytesRead != -1) {
+		int bytesRead = 0;
+		while ( (bytesRead = this.channel.read(buf)) != -1) {
 
 			buf.flip();
 
